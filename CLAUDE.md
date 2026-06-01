@@ -1,5 +1,11 @@
 # DTU IE Bookkeeping — Project Context for Claude
 
+## Session wrap-up
+
+When the user signals they are done for the session, suggest running `/DtuWrap`. It commits pending Teambuilding work, appends to the weekly status, logs hours, and pushes both repos.
+
+---
+
 ## Purpose
 
 Administrative tracking for João's DTU IE student assistant position (DTU Teambuilding project, supervisor: Toke). Entirely separate from the team formation tool repo (baosbcr/Teambuilding).
@@ -42,13 +48,13 @@ Monthly files live at `hours/YYYY-MM-month.md`. Each file has a running total at
 
 **Rules:**
 - Place hours on the days work actually happened, not a preferred schedule.
-- Before logging a day, check the relevant agenda file in `agendas/` for meetings with Toke or Alexander — count those and note them in Evidence.
+- **Agendas are uploaded once at month-end** (not per-session) — during normal sessions, log work hours only. When the month's agenda PDF is added to `agendas/`, run `/DtuWrap` once more so it scans every logged day and retroactively inserts meeting rows for Toke/Alexander meetings.
 - If a meeting ran over and there's commit activity after it, credit the extra time.
 - Exam periods: flag weeks with a note, reduce hours.
 - Never inflate. If evidence is thin, keep estimate conservative and say so.
-- At month end, produce a clean summary table ready to paste into the timesheet form.
+- At month end, add the agenda PDF, run `/DtuWrap`, then produce a clean summary table ready to paste into the timesheet form.
 
-After each working session, append a row to the current month's file.
+After each working session, append a row to the current month's file (or use `/DtuWrap` to do it automatically).
 
 ---
 
