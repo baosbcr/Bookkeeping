@@ -2,4 +2,4 @@
 
 Investigate the necessity of the "Target team size" goal — is it pulling its weight given min/max constraints already bound the result? Also rename "Max teams per challenge" to "Teams per challenge" across the UI, CLI flags, and docs.
 
-Create an interactive resolution step for challenge assignment edge cases (cross-challenge surveys, multiple surveys, etc.). This runs before overflow/late-entry normalisation and before team formation — its sole purpose is locking each student to the right challenge (or moving them to overflow). Modelled after the existing student-number interactive review.
+Test and visually inspect the new interactive assignment review mode: run the app with 2026 data, exercise automatic mode (regression), interactive mode (edge cases appear, dropdowns pre-filled), F1 opt-in, force-audit tag input, override a student and verify teams.csv, localStorage persistence, and reset buttons. Also verify the existing ID review flow (`/resolve`) still works end-to-end.
