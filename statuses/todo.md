@@ -2,8 +2,6 @@
 
 Test and visually inspect the full pipeline: run the app with 2026 data and exercise — automatic mode (regression), interactive mode (edge cases appear, dropdowns pre-filled), F1 opt-in, audit_dropped option (with classlist, verify not-in-classlist badge appears), force-audit tag input, override a student and verify teams.csv, all four --late-entries modes (keep/flex/discard-survey-only/discard-all), localStorage persistence and reset buttons, and the existing ID review flow (/resolve).
 
-Implement multi-file group export support and run against August 2025 data — see PLAN_multi_group_export.md in the Teambuilding repo for the full design (resolve.py, pipeline.py, app.py, index.html changes). Before running Aug 2025: investigate whether the Overflow group is absent because the August 2025 course didn't have one, or because the group export CSV was downloaded before Overflow enrolled. Check with course admin or look for a later group export snapshot.
-
 ## Priority Medium (parked)
 
 Investigate what happens when a ghost student is entered into the force-audit field in interactive mode — ghosts are absent from both the group export and all surveys, so they may not match any student in the pipeline's data. Verify whether the force-audit mechanism handles this gracefully (expected: WARNING [force-audit] no match) or silently does nothing.
@@ -11,3 +9,7 @@ Investigate what happens when a ghost student is entered into the force-audit fi
 Investigate the role of the "Target team size" (--ideal) lever — it may be redundant given that --min/--max already bound team size and --max-groups hard-enforces the number of teams per challenge. With a fixed team count and limited students, evenness is largely determined by simple division; the "ideal" target may no longer be pulling its weight as a separate input. If confirmed redundant, remove it from the UI, CLI, and docs. Also rename "Max teams per challenge" to "Teams per challenge" across UI, CLI flags, and docs.
 
 Audit documentation and README for any other ordering inconsistencies — terms, case codes, or concepts referenced before they are defined (the DOCS.md case-code ordering was one example; check that no others remain).
+
+## Priority Low
+
+Implement multi-file group export support — see PLAN_multi_group_export.md in the Teambuilding repo for the full design (resolve.py, pipeline.py, app.py, index.html changes). Only needed for the August edition of the course. Before running August 2025 data: investigate whether the Overflow group is absent because that run didn't have one, or because the CSV was downloaded before Overflow enrolled.
