@@ -15,3 +15,8 @@ This file accumulates work done during the week for the weekly status update sen
 - Rewrote the README to lead with a complete plain-English guide to the Flask app — every form section explained, all levers described, interactive review flow documented end to end
 - Fixed a bug where classlist confirmation was never shown on the interactive review page; redesigned the student ID badges to show "group export" and/or "classlist" in green/blue when the number is reliable, and "Q1 answer" in orange/red only as a last resort; sticky column headers added to both interactive review tables
 
+
+## Week of 07.06.2026
+
+- Pulled a large update from the Teambuilding repo: course run data reorganised into per-run folders (January 2026, June 2026, August 2025), plus several code and docs improvements from a previous session
+- Reviewed and expanded the todo list: added a Q1 `Accept` button for unresolvable students in the interactive review (high priority); added items for missing survey file warnings, Case D opt-in, ghost student informational rows, and log message consistency (all low priority)
