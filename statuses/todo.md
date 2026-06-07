@@ -17,3 +17,9 @@ Audit documentation and README for any other ordering inconsistencies — terms,
 Implement multi-file group export support — see PLAN_multi_group_export.md in the Teambuilding repo for the full design (resolve.py, pipeline.py, app.py, index.html changes). Only needed for the August edition of the course. Before running August 2025 data: investigate whether the Overflow group is absent because that run didn't have one, or because the CSV was downloaded before Overflow enrolled.
 
 Investigate what the app does when individual survey files are partially or fully missing — does it warn the auditor that a whole group's survey is absent, or does it silently treat every student in that group as having no survey (Case E)? Should surface a clear warning if an expected survey file (e.g. Challenge B) is not uploaded, so the auditor knows the gap is a missing file rather than a genuine mass non-response.
+
+Add an opt-in checkbox to the interactive review to include students who filled out surveys for multiple different challenges (Case D). Currently these are resolved automatically (export challenge wins, data taken from first survey); the checkbox would surface them so the auditor can choose which survey data to apply.
+
+Add an opt-in checkbox to the interactive review to include ghost students (enrolled in classlist but absent from group export and all surveys). Rows are informational only — no assignment dropdown — so the auditor is aware of who is enrolled but invisible to the pipeline.
+
+Audit all pipeline log messages for bracket-content consistency: some messages put the warning type in brackets (e.g. WARNING [ghost]), others put the student number. Pick one convention and apply it uniformly across resolve.py, form_teams.py, pipeline.py, and app.py run_log output.
