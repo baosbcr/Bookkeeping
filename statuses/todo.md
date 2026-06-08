@@ -1,7 +1,6 @@
 ## Priority High
 
-Re-export the June 2025 Challenge A survey from DTU Learn and place it in `Learn Exports/June 2025/Team Formation Survey Individual Attempts/`. The current file there is the August 2025 export placed by mistake (confirmed: 100% of its 43 respondents are in the August 2025 classlist, 0% in June 2025). All other June 2025 survey files are correct.
-
+Re-run the June 2025 pipeline now that the correct Challenge A survey (182 students, 100% June 2025 classlist match) has been placed in `Learn Exports/June 2025/Team Formation Survey Individual Attempts/`. Verify Challenge A diversity is now in line with the other challenges.
 
 ## Priority Medium (parked)
 
