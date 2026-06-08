@@ -4,6 +4,10 @@ Re-run the June 2025 pipeline now that the correct Challenge A survey (182 stude
 
 ## Priority Medium (parked)
 
+Test hosted web access with Alexander at uni — run `python app.py` on the laptop, have Alexander access it via `http://<laptop-ip>:5000` on the same network. Goal: confirm whether the earlier connection failure was a home/hotspot wifi restriction. If it works on the university network, the laptop-hosted workflow is viable for whoever needs to run the pipeline.
+
+
+
 Test the force-audit mechanism end-to-end in interactive mode: enter a student by standard ID, non-standard username, and non-standard email (e.g. nipac@dtu.dk); verify they appear in the review with the correct case badge, and that unmatched entries produce the WARNING [force-audit] log line.
 
 Investigate what happens when a ghost student is entered into the force-audit field in interactive mode — ghosts are absent from both the group export and all surveys, so they may not match any student in the pipeline's data. Verify whether the force-audit mechanism handles this gracefully (expected: WARNING [force-audit] no match) or silently does nothing.
