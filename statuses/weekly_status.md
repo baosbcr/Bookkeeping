@@ -20,3 +20,9 @@ This file accumulates work done during the week for the weekly status update sen
 
 - Pulled a large update from the Teambuilding repo: course run data reorganised into per-run folders (January 2026, June 2026, August 2025), plus several code and docs improvements from a previous session
 - Reviewed and expanded the todo list: added a Q1 `Accept` button for unresolvable students in the interactive review (high priority); added items for missing survey file warnings, Case D opt-in, ghost student informational rows, and log message consistency (all low priority)
+
+- Added a one-click button to the ID review page so auditors can copy a student's survey answer into the student number field without manual copy-paste, useful when verifying non-standard usernames
+- Extended the force-audit field to also accept non-standard DTU usernames and emails (e.g. nipac or nipac@dtu.dk), not just standard student numbers
+- Added a new teams_overview.csv output file — a compact side-by-side grid showing each challenge's teams with team ID, challenge, and size; the full diversity summary remains unchanged
+- Corrected the June course folder name (was mislabelled June 2026); removed unused summary report exports from January 2026; ran both January 2026 and June 2025 pipelines cleanly
+- Discovered the June 2025 Challenge A survey file is actually the August 2025 export — confirmed by matching against classlists (100% August, 0% June); correct file needs re-export from DTU Learn
