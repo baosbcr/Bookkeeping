@@ -2,9 +2,10 @@
 
 Re-export the June 2025 Challenge A survey from DTU Learn and place it in `Learn Exports/June 2025/Team Formation Survey Individual Attempts/`. The current file there is the August 2025 export placed by mistake (confirmed: 100% of its 43 respondents are in the August 2025 classlist, 0% in June 2025). All other June 2025 survey files are correct.
 
-Test and visually inspect the full pipeline: run the app with 2026 data and exercise — automatic mode (regression), interactive mode (edge cases appear, dropdowns pre-filled), F1 opt-in, audit_dropped option (with classlist, verify not-in-classlist badge appears), force-audit tag input, override a student and verify teams.csv, all four --late-entries modes (keep/flex/discard-survey-only/discard-all), localStorage persistence and reset buttons, and the existing ID review flow (/resolve). Also verify the new ID confirmation badges: group export (blue) and classlist (green) appear correctly for export students with classlist uploaded; Q1 answer (orange) appears for survey-only students without classlist; sticky headers work in both review tables.
 
 ## Priority Medium (parked)
+
+Test the force-audit mechanism end-to-end in interactive mode: enter a student by standard ID, non-standard username, and non-standard email (e.g. nipac@dtu.dk); verify they appear in the review with the correct case badge, and that unmatched entries produce the WARNING [force-audit] log line.
 
 Investigate what happens when a ghost student is entered into the force-audit field in interactive mode — ghosts are absent from both the group export and all surveys, so they may not match any student in the pipeline's data. Verify whether the force-audit mechanism handles this gracefully (expected: WARNING [force-audit] no match) or silently does nothing.
 
