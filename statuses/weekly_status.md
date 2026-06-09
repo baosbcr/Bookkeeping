@@ -26,3 +26,7 @@ This file accumulates work done during the week for the weekly status update sen
 - Added a new teams_overview.csv output file — a compact side-by-side grid showing each challenge's teams with team ID, challenge, and size; the full diversity summary remains unchanged
 - Corrected the June course folder name (was mislabelled June 2026); removed unused summary report exports from January 2026; ran both January 2026 and June 2025 pipelines cleanly
 - Discovered the June 2025 Challenge A survey file is actually the August 2025 export — confirmed by matching against classlists (100% August, 0% June); correct file needs re-export from DTU Learn
+- Ran the June 2025 data through the full pipeline — 834 students assigned to 100 teams (25 per challenge, all sizes 8-9), clean output
+- Tested the force-audit feature with January 2026 data: confirmed that flagging a happy-path student surfaces them in the interactive review even though the pipeline would normally skip them silently
+- Investigated garbled names when opening CSV files: confirmed the pipeline is unaffected (reads and writes names correctly); the garbling only happens when Excel opens CSVs with its default Windows-1252 encoding instead of UTF-8
+
