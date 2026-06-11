@@ -62,9 +62,9 @@ After each working session, append a row to the current month's file (or use `/D
 
 ### `statuses/weekly_status.md`
 
-Running log of work done each week, used to draft the weekly update sent to Toke. Written as if the reader has seen the Flask app run once or twice — no internal jargon.
+Rolling backlog of work done, used to draft status messages for Toke. Written as plain English — no code jargon — as if the reader has seen the Flask app run once or twice. No week headings — just a flat list of bullets appended after each session.
 
-Append to it at the end of every working session. After the user confirms they've submitted the update, clear the bullet points under the current week heading and start fresh.
+João submits status updates at the end of formal workdays (Monday, Wednesday, Thursday) before 19:00. `/DtuWrap` checks the day and time and prompts submission on those days, presenting the full backlog as a ready-to-send "Status DD.MM.YYYY" message. After confirmed submission, all bullets are cleared.
 
 ### `statuses/todo.md`
 
