@@ -4,6 +4,8 @@ Re-run the June 2025 pipeline now that the correct Challenge A survey (182 stude
 
 ## Priority Medium (parked)
 
+Run `/sync-skills` on all other machines to pull the updated DtuWrap skill (flat backlog + Mon/Wed/Thu submission check).
+
 Test hosted web access with Alexander at uni — run `python app.py` on the laptop, have Alexander access it via `http://<laptop-ip>:5000` on the same network. Goal: confirm whether the earlier connection failure was a home/hotspot wifi restriction. If it works on the university network, the laptop-hosted workflow is viable for whoever needs to run the pipeline.
 
 
